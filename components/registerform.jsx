@@ -4,8 +4,9 @@ import { IonIcon } from "@ionic/react";
 import {TailSpin} from "react-loader-spinner";
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { mailOutline, lockClosedOutline, diamondOutline } from "ionicons/icons";
+import { mailOutline, lockClosedOutline, diamondOutline,personCircleOutline } from "ionicons/icons";
 import Link from 'next/link';
+import "@/app/src/register.css"
 
 const registerform = () => {
   const router = useRouter();
@@ -37,49 +38,59 @@ const registerform = () => {
     }
   };
   return (
-    <>
+    <body>
+      <div className='bk1'/>
+      <div className='bk2'/>
       <title>Register</title>
       <section>
         <div className="form-box">
           <div className="form-value">
             <form onSubmit={handleSubmit}>
               <h2 className="reg">Register</h2>
+              <p className="regw">Welcome to Eva Fresh Sanitary Products!</p>
+              <br/>
+              <div className='inputboxes'>
               <div className="inputbox">
-                <IonIcon icon={mailOutline} />
+              <div className='block1'/>
+                <IonIcon icon={personCircleOutline} id="icc"/>
                 <input
                   type="name"
                   onChange={(e) => setName(e.target.value)}
                   required
+                  placeholder='Username:'
                 />
-                <label htmlFor="name">Username:</label>
               </div>
               <div className="inputbox">
-                <IonIcon icon={mailOutline} />
+              <div className='block1'/>
+                <IonIcon icon={mailOutline} id="icc"/>
                 <input
                   type="email"
                   onChange={(e) => setEmail(e.target.value)}
                   required
+                  placeholder='Email:'
                 />
-                <label htmlFor="email">Email:</label>
               </div>
               <div className="inputbox">
-                <IonIcon icon={lockClosedOutline} />
+              <div className='block1'/>
+                <IonIcon icon={lockClosedOutline} id="icc" />
                 <input
                   type="password"
                   onChange={(e) => setPassword(e.target.value)}
                   required
+                  placeholder='Password:'
                 />
-                <label htmlFor="password">Password:</label>
               </div>
               <div className="inputbox">
-                <IonIcon icon={diamondOutline} />
+              <div className='block1'/>
+                <IonIcon icon={diamondOutline} id="icc" />
                 <input
                   type="text"
                   onChange={(e) => setAdminCode(e.target.value)}
-                  required
+                  placeholder='Code/optional:'
                 />
-                <label htmlFor="adminCode">Code (Pi first three digits):</label>
               </div>
+              </div>
+              <div className='block'/>
               <button type="submit" className='reg1' disabled={loading}>
               {loading && (
     <>
@@ -93,13 +104,13 @@ const registerform = () => {
                 {error && (<p className='error'>Username has been registered</p>)}
                 {!error && (<p>Already have an account? <Link href="/login">Login</Link></p>)}
                 <br />
-                <p>© 2023 Oasis. All rights reserved.</p>
+                <p>© 2023 Eva Fresh. All rights reserved.</p>
               </div>
             </form>
           </div>
         </div>
       </section>
-    </>
+    </body>
   );
 };
 

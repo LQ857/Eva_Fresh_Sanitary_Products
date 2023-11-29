@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.form-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: white;
+}
+.log{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+.logw{
+    text-align: center;
+}
+.inputbox {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+  }
+body {
+    margin: 0;
+    background: linear-gradient(67deg,red,rgb(207, 89, 26),red,rgb(227, 94, 22));
+    background-attachment: fixed;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.inputboxes{
+    position: relative;
+    left: -3rem;
+}
+input{
+    border: 1px solid black;
+    font-size: 1.15rem;
+    padding-left: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border-radius: 40px;
+    position: relative;
+    bottom: 1.4rem;
+}
+#icc{
+    font-size: 2rem;
+    padding: 1rem;
+}
+.reg1{
+    border: 1px solid black;
+    border-radius: 45px;
+    padding: 0.5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    color: aliceblue;
+    background-color: red;
+}
+.register{
+    padding-top: 1rem;
+}
+.block{
+    padding: 0.2rem;
+}
+.block1{
+    padding: 0.1rem;
+}
+.bk3{
+    padding: 2rem;
+    position: relative;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    height: 25rem;
+    left:-14rem;
+    top:20rem;
+    width: 30rem;
+    background-color: rgba(255, 255, 255, 0.358);
+    transform: rotate(-57deg);
+}
+.bk4{
+    padding: 2rem;
+    position: relative;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    height: 40rem;
+    left: 95rem;
+    bottom: 21rem;
+    width: 30rem;
+    background-color: rgba(255, 255, 255, 0.292);
+    transform: rotate(28deg);
+}
+.recaptcha{
+  position: relative;
+  left: 1rem;
+  padding-bottom: 1rem;
+}
+.load{
+  display: flex;
+  color: white
+}

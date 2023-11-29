@@ -1,13 +1,13 @@
 'use client'
 import React, { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation"; // Fix import
+import { useRouter } from "next/navigation";
 import { IonIcon } from "@ionic/react";
 import { TailSpin } from "react-loader-spinner";
 import { mailOutline, lockClosedOutline } from "ionicons/icons";
 import { signIn } from "next-auth/react";
 import ReCAPTCHA from 'react-google-recaptcha';
-import validateCaptcha from "@/app/api/validateCaptcha/route";
+import "@/app/src/login.css"
 
 const LoginForm = () => {
   const router = useRouter();
@@ -53,51 +53,54 @@ const LoginForm = () => {
   };
 
   return (
-    <div>
+    <body>
       <title>Login</title>
+      <div className='bk3'/>
+      <div className='bk4'/>
       <section>
         <div className="form-box">
           <div className="form-value">
             <form onSubmit={handleSubmit} id="loginForm">
-              <h2>Login</h2>
+              <h2 className="log">Login</h2>
+              <p className="logw">Sign in to unlock more sanitary products!</p>
               <div className="inputbox">
-                <IonIcon icon={mailOutline} />
+                <IonIcon icon={mailOutline} id="icc"/>
                 <input
-                  type="text" // Change type to text
+                  type="text"
                   required
                   value={name}
                   onChange={(e) => setName(e.target.value)}
+                  placeholder="Username:"
                 />
-                <label htmlFor="name">Username:</label>
               </div>
               <div className="inputbox">
-                <IonIcon icon={lockClosedOutline} />
+                <IonIcon icon={lockClosedOutline} id="icc"/>
                 <input
                   type="password"
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Password:"
                 />
-                <label htmlFor="password">Password:</label>
               </div>
-              <br />
               <ReCAPTCHA
+              className="recaptcha"
                 size="normal"
                 sitekey="6LfebB8pAAAAAJ5MZgjhiWg1HCIsBRC5bhdIFIRr"
                 onChange={handleCaptchaChange}
               />
               <button type="submit" className="reg1" disabled={loading}>
                 {loading ? (
-                  <>
+                  <div className="load">
                     <TailSpin
                       type="ThreeDots"
-                      color="black"
-                      height={20}
-                      width={40}
+                      color="white"
+                      height={25}
+                      width={35}
                       style={{ marginRight: "5px" }}
                     />
                     <span>Loading...</span>
-                  </>
+                  </div>
                 ) : (
                   'Login'
                 )}
@@ -110,13 +113,13 @@ const LoginForm = () => {
                   </p>
                 )}
                 <br />
-                <p>© 2023 Oasis. All rights reserved.</p>
+                <p>© 2023 Eva Fresh. All rights reserved.</p>
               </div>
             </form>
           </div>
         </div>
       </section>
-    </div>
+    </body>
   );
 };
 

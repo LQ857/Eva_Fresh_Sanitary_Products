@@ -7,8 +7,7 @@ export async function POST(req) {
   try {
     const { name,email, password, adminCode } = await req.json();
     const hashedPassword = await bcrypt.hash(password, 10);
-    await DBconnect();
-
+    await DBconnect()
     const adminCodeValue = adminCode;
     const adminStatus = adminCodeValue === 'LOUISXIVLETATCESTMOIFRONDE';
 
@@ -19,7 +18,7 @@ export async function POST(req) {
       originalPassword: oripw, 
       password: hashedPassword, 
       admin:adminStatus 
-    });
+    })
 
     return NextResponse.json({ message: "User Created" }, { status: 201 });
   } catch (error) {

@@ -7,7 +7,6 @@ import Dashboardform from "@/components/dashboardform.jsx";
 
 export default async function dashboard() {
   const session = await getServerSession(authOptions);
-  console.log(session)
   if(!session){
     redirect("/login")
   }

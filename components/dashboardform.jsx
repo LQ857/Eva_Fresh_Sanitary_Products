@@ -2,13 +2,13 @@
 
 import { signOut } from "next-auth/react";
 import { useSession } from "next-auth/react";
+import "@/app/src/dashboard.css"
 
 export default function Dashboardform() {
   const { data: session } = useSession();
-  if (!session) {
-    return <div>Loading...</div>;
-  }
+
   return (
+    <body className="bd">
     <div className="grid place-items-center h-screen">
       <div className="shadow-lg p-8 bg-zince-300/10 flex flex-col gap-2 my-6">
         <div>
@@ -25,5 +25,6 @@ export default function Dashboardform() {
         </button>
       </div>
     </div>
+    </body>
   );
 }

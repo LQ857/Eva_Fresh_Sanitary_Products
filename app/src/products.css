@@ -1,0 +1,41 @@
+/* styles.css (or your preferred styling approach) */
+
+.product-page {
+    padding: 20px;
+  }
+  
+  .skeleton-loading {
+    width: 100%;
+    height: 200px; /* Adjust height based on your design */
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loadingAnimation 1.5s infinite;
+  }
+  
+  @keyframes loadingAnimation {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .product-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    max-width: 300px;
+  }
+  
+  .product-card img {
+    max-width: 100%;
+    height: auto;
+  }

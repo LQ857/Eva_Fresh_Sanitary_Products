@@ -11,7 +11,7 @@
     justify-content: center;
     display: flex;
     text-align: center;
-    border: 2px solid black;
+    border: 2px solid transparent;
     border-radius: 1.5rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -61,7 +61,7 @@ input{
     padding: 1rem;
 }
 .reg1{
-    border: 1px solid black;
+    border: 1px solid transparent;
     border-radius: 45px;
     padding: 0.5rem;
     padding-left: 4rem;

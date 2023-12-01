@@ -12,12 +12,11 @@ const productSchema = new Schema ({
         required: true,
     },
     price: {
-        type: Float32Array,
+        type: Number,
         required: true
     },
     imagePath: {
         type: String,
-        required: true,
     },
 })
 

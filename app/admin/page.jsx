@@ -10,6 +10,7 @@ export default async function Admin() {
   let admin;
   const session = await getServerSession(authOptions);
   if(!session) redirect("/login")
+  
   try{
     const response = await axios.post("http://localhost:3000/api/getAdmin",{name: session?.user?.name});
     admin = response.data.admin;

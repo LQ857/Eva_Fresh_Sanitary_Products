@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.form-box{
+    position: relative;
+    top:5rem;
+    padding: 4rem;
+}

@@ -1,14 +1,14 @@
-'use client'
-import React from 'react'
-import "@/app/src/intro.css"
-import Nav from '../nav/page.jsx';
+"use client";
+import React from "react";
+import "@/app/src/intro.css";
+import Nav from "../nav/page.jsx";
 
 const intro = () => {
   return (
     <body>
-        <Nav/>
+      <Nav />
     </body>
-  )
-}
+  );
+};
 
-export default intro
+export default intro;

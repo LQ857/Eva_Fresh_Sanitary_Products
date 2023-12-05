@@ -8,7 +8,5 @@ export default async function Login() {
 
   if (session) redirect("/dashboard");
 
-  return (
-      <Loginform />
-  );
+  return <Loginform />;
 }

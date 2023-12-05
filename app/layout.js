@@ -1,5 +1,5 @@
-import './globals.css'
-import { AuthProvider } from './Providers';
+import "./globals.css";
+import { AuthProvider } from "./Providers";
 
 export const metadata = {
   title: "EvaFresh",
@@ -11,5 +11,5 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <AuthProvider>{children}</AuthProvider>
     </html>
-  )
+  );
 }

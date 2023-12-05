@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -6,17 +6,17 @@ import { IonIcon } from "@ionic/react";
 import { TailSpin } from "react-loader-spinner";
 import { mailOutline, lockClosedOutline } from "ionicons/icons";
 import { signIn } from "next-auth/react";
-import ReCAPTCHA from 'react-google-recaptcha';
-import "@/app/src/login.css"
+import ReCAPTCHA from "react-google-recaptcha";
+import "@/app/src/login.css";
 
 const LoginForm = () => {
   const router = useRouter();
-  const [name, setName] = useState('');
-  const [password, setPassword] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const [captchaValue, setCaptchaValue] = useState('');
+  const [captchaValue, setCaptchaValue] = useState("");
 
   const handleCaptchaChange = (value) => {
     // Handle captcha value change
@@ -25,7 +25,7 @@ const LoginForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!captchaValue) {
       alert("Please click <I'm not a robot> before sending the form");
       return;
@@ -55,8 +55,8 @@ const LoginForm = () => {
   return (
     <body>
       <title>Login</title>
-      <div className='bk3'/>
-      <div className='bk4'/>
+      <div className="bk3" />
+      <div className="bk4" />
       <section>
         <div className="form-box">
           <div className="form-value">
@@ -64,7 +64,7 @@ const LoginForm = () => {
               <h2 className="log">Login</h2>
               <p className="logw">Sign in to unlock more sanitary products!</p>
               <div className="inputbox">
-                <IonIcon icon={mailOutline} id="icc"/>
+                <IonIcon icon={mailOutline} id="icc" />
                 <input
                   type="text"
                   required
@@ -74,7 +74,7 @@ const LoginForm = () => {
                 />
               </div>
               <div className="inputbox">
-                <IonIcon icon={lockClosedOutline} id="icc"/>
+                <IonIcon icon={lockClosedOutline} id="icc" />
                 <input
                   type="password"
                   required
@@ -84,7 +84,7 @@ const LoginForm = () => {
                 />
               </div>
               <ReCAPTCHA
-              className="recaptcha"
+                className="recaptcha"
                 size="normal"
                 sitekey="6LfebB8pAAAAAJ5MZgjhiWg1HCIsBRC5bhdIFIRr"
                 onChange={handleCaptchaChange}
@@ -102,14 +102,17 @@ const LoginForm = () => {
                     <span>Loading...</span>
                   </div>
                 ) : (
-                  'Login'
+                  "Login"
                 )}
               </button>
               <div className="register">
-                {error && <p className="error">Incorrect Username or Password</p>}
+                {error && (
+                  <p className="error">Incorrect Username or Password</p>
+                )}
                 {!error && (
                   <p>
-                    Do not have an account? <Link href="/register">Register</Link>
+                    Do not have an account?{" "}
+                    <Link href="/register">Register</Link>
                   </p>
                 )}
                 <br />

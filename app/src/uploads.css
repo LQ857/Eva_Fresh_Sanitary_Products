@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-body.bd {
-  background-color: white;
+form {
+  padding: 3rem;
 }

@@ -54,7 +54,7 @@ app.post("/upload", uploadmiddleware, async function (req, res) {
   }
   imageCompressor.compressImages(inputFiles, outputFolderPath);
 
-  await post.save().then(() => {
+  await product.save().then(() => {
     console.log("Product saved");
   });
   console.log(product.pictures);

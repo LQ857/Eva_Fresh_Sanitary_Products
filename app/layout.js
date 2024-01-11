@@ -1,4 +1,6 @@
 import "./globals.css";
+import "typeface-poppins";
+
 import { AuthProvider } from "./Providers";
 
 export const metadata = {

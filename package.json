@@ -25,7 +25,8 @@
     "react-dom": "^18",
     "react-google-recaptcha": "^3.1.0",
     "react-loader-spinner": "^5.4.5",
-    "sharp": "^0.33.0"
+    "sharp": "^0.33.0",
+    "typeface-poppins": "^1.1.13"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",

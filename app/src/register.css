@@ -112,3 +112,13 @@ input {
   display: flex;
   color: white;
 }
+.toLogin:hover{
+  text-decoration: underline;
+}
+p.error{
+  background-color: rgb(255, 106, 131);
+  border: 1px solid transparent;
+  color: white;
+  border-radius: 20px;
+  padding: 0.5rem;
+}

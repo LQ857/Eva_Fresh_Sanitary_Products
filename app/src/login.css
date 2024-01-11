@@ -117,3 +117,13 @@ input {
   display: flex;
   color: white;
 }
+p.error{
+  background-color: rgb(255, 106, 131);
+  border: 1px solid transparent;
+  color: white;
+  border-radius: 20px;
+  padding: 0.5rem;
+}
+.toReg:hover{
+  text-decoration: underline;
+}

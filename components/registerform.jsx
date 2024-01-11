@@ -116,7 +116,7 @@ const registerform = () => {
                 {error && <p className="error">Username has been registered</p>}
                 {!error && (
                   <p>
-                    Already have an account? <Link href="/login">Login</Link>
+                    Already have an account? <Link href="/login" className="toLogin">Login</Link>
                   </p>
                 )}
                 <br />

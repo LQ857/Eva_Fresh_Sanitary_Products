@@ -41,6 +41,9 @@ const LoginForm = () => {
 
       if (res.error) {
         setError(true);
+        setTimeout(() => {
+          setError(false);
+        }, 3000);
       } else {
         router.push("/dashboard");
       }
@@ -112,7 +115,7 @@ const LoginForm = () => {
                 {!error && (
                   <p>
                     Do not have an account?{" "}
-                    <Link href="/register">Register</Link>
+                    <Link className="toReg" href="/register">Register</Link>
                   </p>
                 )}
                 <br />

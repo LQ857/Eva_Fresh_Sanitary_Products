@@ -112,10 +112,10 @@ input {
   display: flex;
   color: white;
 }
-.toLogin:hover{
+.toLogin:hover {
   text-decoration: underline;
 }
-p.error{
+p.error {
   background-color: rgb(255, 106, 131);
   border: 1px solid transparent;
   color: white;
